@@ -13,5 +13,31 @@
         <input type="text" id="nameInput" placeholder="Enter your last name"><br>
         <button type="submit">Submit</button>
     </form>
+
+        <script>
+        // Get references to form elements
+        const form = document.getElementById('myForm');
+        const nameInput = document.getElementById('nameInput');
+
+        // Add an event listener for form submission
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+
+            // Your form submission handling code here
+            const name = nameInput.value;
+            console.log(`Submitted name: ${name}`);
+        });
+
+        // Add a separate event listener for the input element
+        nameInput.addEventListener('focus', function () {
+            // Your code for when the input element is focused
+            console.log('Input element focused');
+        });
+
+        nameInput.addEventListener('blur', function () {
+            // Your code for when the input element loses focus
+            console.log('Input element blurred');
+        });
+    </script>
   </body>
 </html>
